@@ -53,7 +53,7 @@ navi[5].innerHTML= "Contact";
 // Putting the cta elements back
 //h1
 let head1 = document.querySelector('.cta-text h1');
-head1.innerHTML = "DOM Is Awesome";
+head1.innerHTML = "DOM </br> Is </br> Awesome";
 
 //button
 let button1 = document.querySelector('.cta-text button');
@@ -96,4 +96,25 @@ mainP[4].innerHTML = "Vision content elementum magna eros, ac posuere elvit temp
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute("src","img/mid-page-accent.jpg");
 
+
+// "contact": {
+//   "contact-h4" : "Contact",
+//   "address" : "123 Way 456 Street Somewhere, USA",
+//   "phone" : "1 (888) 888-8888",
+//   "email" : "sales@greatidea.io", }
+
+//Setting the Contact
+let leContactsH4 = document.querySelector(".contact h4");
+leContactsH4.innerHTML = "Contact";
+
+let leContactsP = document.querySelectorAll(".contact p");
+leContactsP[0].innerHTML = "123 Way 456 Street </br> Somewhere, USA";
+leContactsP[1].innerHTML = "1 (888) 888-8888";
+leContactsP[2].innerHTML = "sales@greatidea.io";
+
+// "footer": {
+//   "copyright" : "Copyright Great Idea! 2018" }
+
+let footerz = document.querySelector("footer");
+footerz.innerHTML = "Copyright Great Idea! 2018";
 
