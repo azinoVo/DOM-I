@@ -42,4 +42,24 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //Putting the nav elements back
-let navi = document.querySelectorAll("header nav");
+let navi = document.querySelectorAll("header nav a");
+navi[0].innerHTML= "Services";
+navi[1].innerHTML= "Product";
+navi[2].innerHTML= "Vision";
+navi[3].innerHTML= "Features";
+navi[4].innerHTML= "About";
+navi[5].innerHTML= "Contact";
+
+// Putting the cta elements back
+//h1
+let head1 = document.querySelector('.cta-text h1');
+head1.innerHTML = "DOM Is Awesome";
+
+//button
+let button1 = document.querySelector('.cta-text button');
+button1.innerHTML = "Get Started";
+
+//code snippet picture
+let codeSnip = document.getElementById("cta-img");
+codeSnip.setAttribute("src","img/header-img.png");
+
