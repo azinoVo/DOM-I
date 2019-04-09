@@ -41,14 +41,58 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-//Putting the nav elements back
+//Putting the nav elements back with color
+// EX: cell4.innerHTML = "<span style='font-size:40px'>John Doe</span>";
+// "nav-item-1": "Services",
+//     "nav-item-2": "Product",
+//     "nav-item-3": "Vision",
+//     "nav-item-4": "Features",
+//     "nav-item-5": "About",
+//     "nav-item-6": "Contact",
+
 let navi = document.querySelectorAll("header nav a");
-navi[0].innerHTML= "Services";
-navi[1].innerHTML= "Product";
-navi[2].innerHTML= "Vision";
-navi[3].innerHTML= "Features";
-navi[4].innerHTML= "About";
-navi[5].innerHTML= "Contact";
+// navi[0].innerHTML= "<span style='color:green'>Services</span>";
+// navi[1].innerHTML= "<span style='color:green'>Product</span>";
+// navi[2].innerHTML= "<span style='color:green'>Vision</span>";
+// navi[3].innerHTML= "<span style='color:green'>Features</span>";
+// navi[4].innerHTML= "<span style='color:green'>About</span>";
+// navi[5].innerHTML= "<span style='color:green'>Contact</span>";
+
+//using textContent - innerHTML displays text and any HTML tags within the "" while textContent will display
+// everything as written within the "" including text like <b> or </br>.
+navi[0].textContent= "Services";
+navi[0].style.color = "green";
+navi[1].textContent= "Product";
+navi[1].style.color = "green";
+navi[2].textContent= "Vision";
+navi[2].style.color = "green";
+navi[3].textContent= "Features";
+navi[3].style.color = "green";
+navi[4].textContent= "About";
+navi[4].style.color = "green";
+navi[5].textContent= "Contact";
+navi[5].style.color = "green";
+
+//Adding 2 extra navs
+// EX: var p = document.createElement("p");
+// document.body.appendChild(p);
+// Another EX: 
+// var parent = document.createElement("div");
+// var p = document.createElement("p");
+// parent.append(p);
+// console.log(parent.childNodes); // NodeList [ <p> ]
+//Parent
+
+let navParent = document.querySelector("header nav");
+let newNav = document.createElement("a");
+let newNav2 = document.createElement("a");
+newNav.innerHTML = "<span style='color:green'>DARK_SIDE</span>";
+newNav.setAttribute("href", "#");
+newNav2.setAttribute("href", "#");
+newNav2.innerHTML = "<span style='color:green'>DARKER_SIDE</span>";
+navParent.append(newNav);
+navParent.append(newNav2);
+
 
 // Putting the cta elements back
 //h1
@@ -78,6 +122,7 @@ codeSnip.setAttribute("src","img/header-img.png");
 //   "vision-content": "Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.",
 
 //Adding Back Main Content
+//Look up textContent
 let mainH4 = document.querySelectorAll(".text-content h4");
 mainH4[0].innerHTML = "Features";
 mainH4[1].innerHTML = "About";
@@ -117,4 +162,6 @@ leContactsP[2].innerHTML = "sales@greatidea.io";
 
 let footerz = document.querySelector("footer");
 footerz.innerHTML = "Copyright Great Idea! 2018";
+
+
 
